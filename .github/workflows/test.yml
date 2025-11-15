@@ -1,0 +1,31 @@
+name: Tests
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+    
+    - name: Restore dependencies
+      run: dotnet restore CalculationsDemo.sln
+    
+    - name: Build
+      run: dotnet build CalculationsDemo.sln --configuration Release --no-restore
+    
+    - name: Test
+      run: dotnet test CalculationsDemo.sln --configuration Release --no-build --verbosity normal
