@@ -32,13 +32,8 @@ public class Calculator
     /// <summary>
     /// Divides the first number by the second.
     /// </summary>
-    /// <exception cref="DivideByZeroException">Thrown when dividing by zero.</exception>
     public double Divide(int a, int b)
     {
-        if (b == 0)
-        {
-            throw new DivideByZeroException("Cannot divide by zero.");
-        }
         return (double)a / b;
     }
 
@@ -74,47 +69,27 @@ public class Calculator
     /// <summary>
     /// Calculates the average of an array of numbers.
     /// </summary>
-    /// <exception cref="ArgumentException">Thrown when the array is empty.</exception>
     public double Average(params int[] numbers)
     {
-        if (numbers == null || numbers.Length == 0)
-        {
-            throw new ArgumentException("Cannot calculate average of an empty array.");
-        }
         return numbers.Average();
     }
 
     /// <summary>
     /// Finds the maximum value in an array of numbers.
     /// </summary>
-    /// <exception cref="ArgumentException">Thrown when the array is empty.</exception>
     public int Max(params int[] numbers)
     {
-        if (numbers == null || numbers.Length == 0)
-        {
-            throw new ArgumentException("Cannot find maximum of an empty array.");
-        }
         return numbers.Max();
     }
 
     /// <summary>
     /// Finds the minimum value in an array of numbers.
     /// </summary>
-    /// <exception cref="ArgumentException">Thrown when the array is empty.</exception>
     public int Min(params int[] numbers)
     {
-        if (numbers == null || numbers.Length == 0)
-        {
-            throw new ArgumentException("Cannot find minimum of an empty array.");
-        }
         return numbers.Min();
     }
 
-    // VULNERABILITY 1: SQL Injection (Critical)
-    /// <summary>
-    /// Retrieves calculation history from database using user-provided filter.
-    /// WARNING: This method contains a SQL injection vulnerability for demonstration purposes.
-    /// </summary>
     public string GetCalculationHistory(string userId, string connectionString)
     {
         using (SqlConnection connection = new SqlConnection(connectionString))
@@ -135,11 +110,7 @@ public class Calculator
         return string.Empty;
     }
 
-    // VULNERABILITY 2: Command Injection (High)
-    /// <summary>
-    /// Executes a system command to convert calculation results.
-    /// WARNING: This method contains a command injection vulnerability for demonstration purposes.
-    /// </summary>
+    
     public string ConvertResultFormat(string fileName, string outputFormat)
     {
         // Command injection vulnerability - using user input directly in system command
@@ -157,11 +128,7 @@ public class Calculator
         return output;
     }
 
-    // VULNERABILITY 3: Path Traversal (High)
-    /// <summary>
-    /// Loads calculation data from a file.
-    /// WARNING: This method contains a path traversal vulnerability for demonstration purposes.
-    /// </summary>
+    
     public string LoadCalculationData(string filename)
     {
         // Path traversal vulnerability - not validating or sanitizing the file path
@@ -175,11 +142,7 @@ public class Calculator
         return string.Empty;
     }
 
-    // VULNERABILITY 4: Hardcoded Credentials (Medium/High)
-    /// <summary>
-    /// Connects to the calculation database.
-    /// WARNING: This method contains hardcoded credentials for demonstration purposes.
-    /// </summary>
+    
     public SqlConnection GetDatabaseConnection()
     {
         // Hardcoded credentials vulnerability
@@ -187,11 +150,7 @@ public class Calculator
         return new SqlConnection(connectionString);
     }
 
-    // VULNERABILITY 5: Weak Random Number Generation (Medium)
-    /// <summary>
-    /// Generates a random token for calculation session.
-    /// WARNING: This method uses insecure random number generation for demonstration purposes.
-    /// </summary>
+    
     public string GenerateSessionToken()
     {
         // Weak random number generation - using Random instead of cryptographically secure RNG
@@ -201,11 +160,7 @@ public class Calculator
         return Convert.ToBase64String(tokenBytes);
     }
 
-    // VULNERABILITY 6: Another SQL Injection variant (Critical)
-    /// <summary>
-    /// Searches for calculations matching criteria.
-    /// WARNING: This method contains a SQL injection vulnerability for demonstration purposes.
-    /// </summary>
+    
     public List<string> SearchCalculations(string searchTerm, string connectionString)
     {
         List<string> results = new List<string>();
