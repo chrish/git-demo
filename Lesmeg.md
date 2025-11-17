@@ -1,6 +1,3 @@
-Dette er en test
-Voff
-
 # Prosjekttittel
 
 En kort beskrivelse av hva dette prosjektet gjør og hvem det er for.
@@ -43,8 +40,4 @@ Bidrag er velkomne! Åpne gjerne et issue eller en pull request.
 
 ## Lisens
 MIT © Ditt Navn
-testing my commit skills
-testing my signed commit skills
-testing my signed commit skills
-testing my signed commit skills
-testing my signed commit skills
+Quackety Quack
