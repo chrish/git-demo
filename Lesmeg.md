@@ -42,3 +42,4 @@ Bidrag er velkomne! Åpne gjerne et issue eller en pull request.
 MIT © Ditt Navn
 Quackety Quack
 Quackety Quack
+Kvakketikvakk
