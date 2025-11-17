@@ -3,6 +3,7 @@ using System.Diagnostics;
 
 namespace Calculations;
 
+// This is just a dummy class!
 public class Calculator
 {
     /// <summary>
