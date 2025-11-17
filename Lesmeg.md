@@ -46,3 +46,4 @@ MIT © Ditt Navn
 testing my commit skills
 testing my signed commit skills
 testing my signed commit skills
+testing my signed commit skills
