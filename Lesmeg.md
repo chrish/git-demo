@@ -44,3 +44,5 @@ Bidrag er velkomne! Åpne gjerne et issue eller en pull request.
 ## Lisens
 MIT © Ditt Navn
 testing my commit skills
+testing my signed commit skills
+testing my signed commit skills
