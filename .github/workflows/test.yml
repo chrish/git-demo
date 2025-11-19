@@ -15,7 +15,6 @@ jobs:
     
     steps:
     - uses: chrish/checkout@main
-    - name: Use secret in a script
       env:
           SUPER_SECRET: ${{ secrets.SUPER_SECRET }}
           
