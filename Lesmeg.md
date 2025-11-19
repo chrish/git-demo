@@ -1,6 +1,6 @@
 # Lesmeg
 
-En kort beskrivelse av hva dette prosjektet gjør og hvem det er for.
+En kort beskrivelse av hva dette prosjektet gjør og hvem det er for. Quack!
 
 ## Funksjoner
 - Funksjon 1
