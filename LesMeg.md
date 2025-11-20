@@ -1,4 +1,4 @@
-## LESMEG
+## LESMEG!
 
 En kort beskrivelse av hva dette prosjektet gjør og hvem det er for.
 
